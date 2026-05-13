@@ -77,7 +77,8 @@ from fastapi.middleware.cors import CORSMiddleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://interviewer-ai-xi.vercel.app"
+        "https://interviewer-ai-xi.vercel.app",
+        "https://interviewer-ai-git-main-tina-s-project05.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
