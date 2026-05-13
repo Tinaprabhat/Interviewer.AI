@@ -73,7 +73,9 @@ app = FastAPI(
 )
 
 app.add_middleware(
-    allow_origins=["*"],
+    allow_origins=[
+   "https://interviewer-ai-xi.vercel.app/"
+],
     allow_origins=settings.cors_origins_list,
     allow_credentials=True,
     allow_methods=["*"],
