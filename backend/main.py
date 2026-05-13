@@ -72,11 +72,13 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
+    CORSMiddleware,
     allow_origins=[
-   "https://interviewer-ai-xi.vercel.app/"
-],
-    allow_origins=settings.cors_origins_list,
+        "https://interviewer-ai-xi.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
